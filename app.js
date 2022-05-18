@@ -30,6 +30,10 @@ http.createServer(function (request, response) {
         response.writeHead(200,{"Content-Type":"text/HTML"});
         response.write("<h1>search</h1>");
         response.end();
+    }else{
+        response.writeHead(200,{"Content-Type":"text/HTML"});
+        response.write("404");
+        response.end();
     }
 }).listen(process.env.PORT || 3000);
 console.log("Server已開啟port: 3000.");
